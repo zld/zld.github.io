@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://zld.github.io/sitemap.xml 
