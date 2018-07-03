@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-02T20:30:33+08:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/07/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-07-02T20:26:29+08:00</published><updated>2018-07-02T20:26:29+08:00</updated><id>http://localhost:4000/jekyll/update/2018/07/02/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/07/02/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-03T20:15:58+08:00</updated><id>http://localhost:4000/</id><title type="html">zld</title><subtitle>Just a Blog</subtitle><entry><title type="html">iOS 12 内购失败问题</title><link href="http://localhost:4000/ios/2018/07/03/iOS-12-IAP.html" rel="alternate" type="text/html" title="iOS 12 内购失败问题" /><published>2018-07-03T20:08:29+08:00</published><updated>2018-07-03T20:08:29+08:00</updated><id>http://localhost:4000/ios/2018/07/03/iOS-12-IAP</id><content type="html" xml:base="http://localhost:4000/ios/2018/07/03/iOS-12-IAP.html">&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
+
+&lt;p&gt;自从iOS12开始，部分（好吧就是我们的）App一直内购失败，商品获取能成功，就是&lt;code class=&quot;highlighter-rouge&quot;&gt;addPayment&lt;/code&gt;后总提示&lt;code class=&quot;highlighter-rouge&quot;&gt;cannot connect to itunes store&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    NSErrorFailingURLKey = https://sandbox.itunes.apple.com/bag.xml?ix=6&amp;amp;os=11&amp;amp;locale=zh_CN;
+    NSErrorFailingURLStringKey = &quot;https://sandbox.itunes.apple.com/bag.xml?ix=6&amp;amp;os=11&amp;amp;locale=zh_CN&quot;;
+    NSLocalizedDescription = &quot;无法连接到 iTunes Store&quot;;
+    NSUnderlyingError = Error Domain=kCFErrorDomainCFNetwork Code=-1001 &quot;(null)&quot; UserInfo={_kCFStreamErrorCodeKey=-2102, _kCFStreamErrorDomainKey=4};
+    _kCFStreamErrorCodeKey = -2102;
+    _kCFStreamErrorDomainKey = 4;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;直接放上答案&quot;&gt;直接放上答案：&lt;/h3&gt;
+
+&lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;SKMutablePayment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SKMutablePayment&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;paymentWithProduct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;payment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quantity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;payment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;requestData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这里的&lt;code class=&quot;highlighter-rouge&quot;&gt;requestData&lt;/code&gt;是不能赋值的，官方文档说明如下：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Discussion&lt;/p&gt;
+
+  &lt;p&gt;The default value is nil. &lt;strong&gt;If requestData is not nil, your payment will be rejected by the Apple App Store.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在iOS12之前，虽然是不允许的，但是苹果却没做什么限制，RELEASE环境也没问题。iOS12突然这样了，真是让人措手不及。&lt;/p&gt;
+
+&lt;h3 id=&quot;总结两点&quot;&gt;总结两点：&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;认真读文档&lt;/li&gt;
+  &lt;li&gt;苹果爸爸不让干的事儿，能不干就别干&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">问题</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/07/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-07-02T20:26:29+08:00</published><updated>2018-07-02T20:26:29+08:00</updated><id>http://localhost:4000/jekyll/update/2018/07/02/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/07/02/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 

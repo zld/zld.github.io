@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "iOS 12 内购失败问题"
+date:   2018-07-03 20:08:29 +0800
+categories: iOS
+---
+
+### 问题
+
+自从iOS12开始，部分（好吧就是我们的）App一直内购失败，商品获取能成功，就是`addPayment`后总提示`cannot connect to itunes store`
+
+
+```
+{
+    NSErrorFailingURLKey = https://sandbox.itunes.apple.com/bag.xml?ix=6&os=11&locale=zh_CN;
+    NSErrorFailingURLStringKey = "https://sandbox.itunes.apple.com/bag.xml?ix=6&os=11&locale=zh_CN";
+    NSLocalizedDescription = "无法连接到 iTunes Store";
+    NSUnderlyingError = Error Domain=kCFErrorDomainCFNetwork Code=-1001 "(null)" UserInfo={_kCFStreamErrorCodeKey=-2102, _kCFStreamErrorDomainKey=4};
+    _kCFStreamErrorCodeKey = -2102;
+    _kCFStreamErrorDomainKey = 4;
+}
+```
+
+### 直接放上答案：
+
+```objc
+    SKMutablePayment *payment = [SKMutablePayment paymentWithProduct:product];
+    payment.quantity = 1;
+    payment.requestData = requestData;
+    // ...
+```
+
+这里的`requestData`是不能赋值的，官方文档说明如下：
+
+> Discussion
+> 
+> The default value is nil. **If requestData is not nil, your payment will be rejected by the Apple App Store.**
+
+在iOS12之前，虽然是不允许的，但是苹果却没做什么限制，RELEASE环境也没问题。iOS12突然这样了，真是让人措手不及。
+
+### 总结两点：
+
+* 认真读文档
+* 苹果爸爸不让干的事儿，能不干就别干
