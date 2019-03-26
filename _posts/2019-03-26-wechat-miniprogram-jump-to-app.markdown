@@ -58,7 +58,7 @@ BOOL result = [WXApi handleOpenURL:url delegate:[WechatSDKDelegate sharedInstanc
 
 有意思，猜测可以通过剪切板将需要的信息传递过来，在App中获取后再做好处理就OK了。那么，接下来就是验证了。
 
-我将 `app-parameter` 中线传数据A两次，然后传一次数据B，最后再传一次A，然后我在App中可以从剪切板中获取到以下的数据：
+我将 `app-parameter` 中线传数据A两次，然后传一次数据B，最后再传一次A，然后我在App中可以从剪切板中( `[UIPasteboard generalPasteboard].items[0][@"context"]` )获取到以下的数据：
 
 ![-w914](/media//15535967774203.jpg)
 

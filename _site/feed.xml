@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-26T18:51:45+08:00</updated><id>http://localhost:4000/</id><title type="html">zld</title><subtitle>Just a Blog</subtitle><entry><title type="html">微信小程序跳转App时，app-parameter信息的传递研究</title><link href="http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app.html" rel="alternate" type="text/html" title="微信小程序跳转App时，app-parameter信息的传递研究" /><published>2019-03-26T16:28:29+08:00</published><updated>2019-03-26T16:28:29+08:00</updated><id>http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app</id><content type="html" xml:base="http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app.html">&lt;h2 id=&quot;问题描述&quot;&gt;问题描述&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-26T20:36:17+08:00</updated><id>http://localhost:4000/</id><title type="html">zld</title><subtitle>Just a Blog</subtitle><entry><title type="html">微信小程序跳转App时，app-parameter信息的传递研究</title><link href="http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app.html" rel="alternate" type="text/html" title="微信小程序跳转App时，app-parameter信息的传递研究" /><published>2019-03-26T16:28:29+08:00</published><updated>2019-03-26T16:28:29+08:00</updated><id>http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app</id><content type="html" xml:base="http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app.html">&lt;h2 id=&quot;问题描述&quot;&gt;问题描述&lt;/h2&gt;
 
 &lt;p&gt;微信的小程序在跳转App时，是可用通过&lt;code class=&quot;highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt;来传递一些额外信息&lt;/p&gt;
 
@@ -50,7 +50,7 @@
 
 &lt;p&gt;有意思，猜测可以通过剪切板将需要的信息传递过来，在App中获取后再做好处理就OK了。那么，接下来就是验证了。&lt;/p&gt;
 
-&lt;p&gt;我将 &lt;code class=&quot;highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt; 中线传数据A两次，然后传一次数据B，最后再传一次A，然后我在App中可以从剪切板中获取到以下的数据：&lt;/p&gt;
+&lt;p&gt;我将 &lt;code class=&quot;highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt; 中线传数据A两次，然后传一次数据B，最后再传一次A，然后我在App中可以从剪切板中( &lt;code class=&quot;highlighter-rouge&quot;&gt;[UIPasteboard generalPasteboard].items[0][@&quot;context&quot;]&lt;/code&gt; )获取到以下的数据：&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/media//15535967774203.jpg&quot; alt=&quot;-w914&quot; /&gt;&lt;/p&gt;
 
