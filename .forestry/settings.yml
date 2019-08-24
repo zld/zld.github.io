@@ -6,6 +6,11 @@ webhook_url:
 sections:
 - type: heading
   label: "\U0001F973"
+- type: directory
+  path: _posts
+  label: Directory
+  create: all
+  match: "**/*"
 - type: jekyll-pages
   label: Pages
   create: all
