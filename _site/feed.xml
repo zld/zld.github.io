@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-28T17:19:36+08:00</updated><id>http://localhost:4000/</id><title type="html">zld</title><subtitle>Just a Blog</subtitle><entry><title type="html">微信小程序跳转App时，app-parameter信息的传递研究</title><link href="http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app.html" rel="alternate" type="text/html" title="微信小程序跳转App时，app-parameter信息的传递研究" /><published>2019-03-26T16:28:29+08:00</published><updated>2019-03-26T16:28:29+08:00</updated><id>http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app</id><content type="html" xml:base="http://localhost:4000/ios/2019/03/26/wechat-miniprogram-jump-to-app.html">&lt;h2 id=&quot;问题描述&quot;&gt;问题描述&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://zhulida.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://zhulida.com/" rel="alternate" type="text/html" /><updated>2021-04-28T17:37:21+08:00</updated><id>http://zhulida.com/feed.xml</id><title type="html">zld</title><subtitle>Just a Blog</subtitle><author><name>Riccardo Graziosi</name></author><entry><title type="html">微信小程序跳转App时，app-parameter信息的传递研究</title><link href="http://zhulida.com/ios/2019/03/26/wechat-miniprogram-jump-to-app.html" rel="alternate" type="text/html" title="微信小程序跳转App时，app-parameter信息的传递研究" /><published>2019-03-26T16:28:29+08:00</published><updated>2019-03-26T16:28:29+08:00</updated><id>http://zhulida.com/ios/2019/03/26/wechat-miniprogram-jump-to-app</id><content type="html" xml:base="http://zhulida.com/ios/2019/03/26/wechat-miniprogram-jump-to-app.html">&lt;h2 id=&quot;问题描述&quot;&gt;问题描述&lt;/h2&gt;
 
-&lt;p&gt;微信的小程序在跳转App时，是可用通过&lt;code class=&quot;highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt;来传递一些额外信息&lt;/p&gt;
+&lt;p&gt;微信的小程序在跳转App时，是可用通过&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt;来传递一些额外信息&lt;/p&gt;
 
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;launchApp&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;additionalInfoxxxxx&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;binderror&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;launchAppError&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;打开&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;APP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;launchApp&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;additionalInfoxxxxx&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;binderror&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;launchAppError&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;打开APP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;但我们在 &lt;code class=&quot;highlighter-rouge&quot;&gt;AppDelegate&lt;/code&gt; 中的 &lt;code class=&quot;highlighter-rouge&quot;&gt;- (BOOL)application:openURL:sourceApplication:annotation:&lt;/code&gt; 中打断点后，可以看到，只有没什么信息量的url和为nil的annotation：&lt;/p&gt;
+&lt;p&gt;但我们在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AppDelegate&lt;/code&gt; 中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- (BOOL)application:openURL:sourceApplication:annotation:&lt;/code&gt; 中打断点后，可以看到，只有没什么信息量的url和为nil的annotation：&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/media//15535935678385.jpg&quot; alt=&quot;-w406&quot; /&gt;&lt;/p&gt;
 
@@ -28,7 +28,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;可以看到，在 &lt;code class=&quot;highlighter-rouge&quot;&gt;onReq:&lt;/code&gt; 竟然能取到结构很复杂的 &lt;code class=&quot;highlighter-rouge&quot;&gt;req&lt;/code&gt;，而 &lt;code class=&quot;highlighter-rouge&quot;&gt;req.message.messageExt&lt;/code&gt; 就是我们从小程序中传过来的 &lt;code class=&quot;highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt;。那么问题来了，我们在上面可以看到，除了一个很简短的url，没有任何其他信息了，这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;messageExt&lt;/code&gt; 的内容是从哪里获取的呢？&lt;/p&gt;
+&lt;p&gt;可以看到，在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onReq:&lt;/code&gt; 竟然能取到结构很复杂的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;req&lt;/code&gt;，而 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;req.message.messageExt&lt;/code&gt; 就是我们从小程序中传过来的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt;。那么问题来了，我们在上面可以看到，除了一个很简短的url，没有任何其他信息了，这个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;messageExt&lt;/code&gt; 的内容是从哪里获取的呢？&lt;/p&gt;
 
 &lt;h2 id=&quot;猜测&quot;&gt;猜测&lt;/h2&gt;
 
@@ -46,11 +46,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/media//15535958910573.jpg&quot; alt=&quot;-w1679&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;就是这个 &lt;code class=&quot;highlighter-rouge&quot;&gt;[WXOMTAOpenUDID _getDictFromPasteboard:]&lt;/code&gt; 方法！&lt;/p&gt;
+&lt;p&gt;就是这个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[WXOMTAOpenUDID _getDictFromPasteboard:]&lt;/code&gt; 方法！&lt;/p&gt;
 
 &lt;p&gt;有意思，猜测可以通过剪切板将需要的信息传递过来，在App中获取后再做好处理就OK了。那么，接下来就是验证了。&lt;/p&gt;
 
-&lt;p&gt;我将 &lt;code class=&quot;highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt; 中线传数据A两次，然后传一次数据B，最后再传一次A，然后我在App中可以从剪切板中( &lt;code class=&quot;highlighter-rouge&quot;&gt;[UIPasteboard generalPasteboard].items[0][@&quot;context&quot;]&lt;/code&gt; )获取到以下的数据：&lt;/p&gt;
+&lt;p&gt;我将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt; 中线传数据A两次，然后传一次数据B，最后再传一次A，然后我在App中可以从剪切板中( &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[UIPasteboard generalPasteboard].items[0][@&quot;context&quot;]&lt;/code&gt; )获取到以下的数据：&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/media//15535967774203.jpg&quot; alt=&quot;-w914&quot; /&gt;&lt;/p&gt;
 
@@ -60,6 +60,6 @@
 
 &lt;p&gt;&lt;img src=&quot;/media//15535965424547.jpg&quot; alt=&quot;-w549&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;被圈出来的地方就是我之前小程序中 &lt;code class=&quot;highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt; 中传过来的值。&lt;/p&gt;
+&lt;p&gt;被圈出来的地方就是我之前小程序中 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app-parameter&lt;/code&gt; 中传过来的值。&lt;/p&gt;
 
-&lt;p&gt;OK，破案。&lt;/p&gt;</content><author><name></name></author><summary type="html">问题描述</summary></entry></feed>
+&lt;p&gt;OK，破案。&lt;/p&gt;</content><author><name>Riccardo Graziosi</name></author><category term="iOS" /><summary type="html">问题描述</summary></entry></feed>

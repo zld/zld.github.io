@@ -1,40 +1,4 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link type="application/atom+xml" rel="alternate" href="http://zhulida.com/feed.xml" title="zld" />
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>微信小程序跳转App时，app-parameter信息的传递研究 | zld</title>
-<meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="微信小程序跳转App时，app-parameter信息的传递研究" />
-<meta name="author" content="Riccardo Graziosi" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="问题描述" />
-<meta property="og:description" content="问题描述" />
-<link rel="canonical" href="http://zhulida.com/ios/2019/03/26/wechat-miniprogram-jump-to-app.html" />
-<meta property="og:url" content="http://zhulida.com/ios/2019/03/26/wechat-miniprogram-jump-to-app.html" />
-<meta property="og:site_name" content="zld" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-03-26T16:28:29+08:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="微信小程序跳转App时，app-parameter信息的传递研究" />
-<script type="application/ld+json">
-{"headline":"微信小程序跳转App时，app-parameter信息的传递研究","dateModified":"2019-03-26T16:28:29+08:00","url":"http://zhulida.com/ios/2019/03/26/wechat-miniprogram-jump-to-app.html","datePublished":"2019-03-26T16:28:29+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://zhulida.com/ios/2019/03/26/wechat-miniprogram-jump-to-app.html"},"author":{"@type":"Person","name":"Riccardo Graziosi"},"description":"问题描述","@type":"BlogPosting","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-  
-  
-
-  <link rel="shortcut icon" type="image/x-icon" href="/./logo.png" />
-  <link rel="stylesheet" href="http://zhulida.com/assets/css/main.css" />
-</head><body>
-    <main class="page-content" aria-label="Content">
-        <div class="wrapper">
-            <a href="http://zhulida.com">..</a>
-<h1>微信小程序跳转App时，app-parameter信息的传递研究</h1>
-<h2 id="问题描述">问题描述</h2>
+I"�<h2 id="问题描述">问题描述</h2>
 
 <p>微信的小程序在跳转App时，是可用通过<code class="language-plaintext highlighter-rouge">app-parameter</code>来传递一些额外信息</p>
 
@@ -99,9 +63,4 @@
 <p>被圈出来的地方就是我之前小程序中 <code class="language-plaintext highlighter-rouge">app-parameter</code> 中传过来的值。</p>
 
 <p>OK，破案。</p>
-
-
-        </div>
-    </main>
-    </body>
-</html>
+:ET
