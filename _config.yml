@@ -24,8 +24,8 @@ github_username:  zld
 
 # Build settings
 markdown: kramdown
-# theme: minima
-theme: no-style-please
+theme: minima
+# theme: no-style-please
 plugins:
   - jekyll-feed
 
