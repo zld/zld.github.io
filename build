@@ -1,0 +1,4 @@
+#!/bin/bash
+rm index.html
+tiddlywiki . --build index
+mv output/index.html .

@@ -1,0 +1,10 @@
+created: 20260129135230605
+modified: 20260129140329257
+tags: 
+title: 📂
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[tiddlers]!is[system]sort[created]reverse[]]">
+<$link to=<<currentTiddler>>><<currentTiddler>></$link>
+<br/>
+</$list>
