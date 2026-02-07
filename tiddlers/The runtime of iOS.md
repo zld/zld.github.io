@@ -83,7 +83,7 @@ Objective-C是一个面向对象的语言，早期实现是基于面向过程的
 * [](<#NSProtocol>)
 * [](<#objc_msgSend>)
 * ARC
-  * weak
+  * [](<#The weak of Objective-C>)
 * autorelease
 * autoreleasepool
 
