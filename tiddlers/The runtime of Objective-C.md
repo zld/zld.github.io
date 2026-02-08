@@ -1,5 +1,5 @@
 ## 是什么
-Objective-C是一个面向对象的语言，早期实现是基于面向过程的C和汇编语言，后面由C换到了C++。所以我理解为早期为了实现“面向过程->面向对象”而实现了runtime。
+Objective-C是一个面向对象的[动态语言](https://en.wikipedia.org/wiki/Dynamic_programming_language)，早期实现是基于面向过程的C和汇编语言，后面由C换到了C++。所以我理解为早期为了实现“面向过程->面向对象”而实现了runtime。
 
 > The Objective-C language is a simple computer language designed to enable sophisticated object-oriented programming. Objective-C is defined as a small but powerful set of extensions to the standard ANSI C language. Its additions to C are mostly based on *Smalltalk*, one of the first object-oriented programming languages. Objective-C is designed to give C full object-oriented programming capabilities, and to do so in a simple and straightforward way. - [The Objective-C Programming Language](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
 
@@ -79,7 +79,7 @@ Objective-C是一个面向对象的语言，早期实现是基于面向过程的
 
 ## 如何实现
 * [](<#NSObject>)
-* Category
+* [](<#The Category of Objective-C>)
 * [](<#NSProtocol>)
 * [](<#objc_msgSend>)
 * ARC
