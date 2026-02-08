@@ -84,7 +84,7 @@ Objective-C是一个面向对象的[动态语言](https://en.wikipedia.org/wiki/
 * [](<#objc_msgSend>)
 * ARC
   * [](<#The weak of Objective-C>)
-* autorelease
+* [](<#autorelease>)
 * autoreleasepool
 
 ## 怎么用

@@ -40,3 +40,38 @@ flowchart TD
     U -- 是 --> W[forwardInvocation]
     W --> X[自定义处理或转发]
 ```
+
+## NSMethodSignature
+
+```objc
+@interface NSMethodSignature : NSObject
+
++ (nullable NSMethodSignature *)signatureWithObjCTypes:(const char *)types;
+
+@property (readonly) NSUInteger numberOfArguments;
+- (const char *)getArgumentTypeAtIndex:(NSUInteger)idx NS_RETURNS_INNER_POINTER;
+
+@property (readonly) NSUInteger frameLength;
+
+- (BOOL)isOneway;
+
+@property (readonly) const char *methodReturnType NS_RETURNS_INNER_POINTER;
+@property (readonly) NSUInteger methodReturnLength;
+
+@end
+```
+
+`NSMethodSignature` 是“一次方法调用在内存层面的完整调用说明书”。
+它精确描述了：
+* 返回值类型和大小
+* 每个参数的类型、大小、对齐方式
+* 参数个数
+* 调用约定（隐含的 `self`、`_cmd`）
+
+可以按如下理解
+* SEL = 方法名
+* IMP = 函数指针
+* NSMethodSignature = 函数的 ABI 描述
+* NSInvocation = 已填好参数的函数调用包
+
+如果找到了IMP，就执行，如果没找到IMP，就得想办法把当前正在执行的方法抛出去给用户/业务逻辑决策。而如何抛，就需要用NSInvocation构造一下，交给forwardInvocation。如何构造，就需要根据NSMethodSignature来决定。
